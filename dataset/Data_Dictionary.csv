@@ -1,0 +1,60 @@
+﻿Table,Column,Meaning,Note
+Branches,BranchID,Unique branch key.,Synthetic training field
+Branches,BranchName,Synthetic branch label.,Synthetic training field
+Branches,District,District where the branch is located.,Synthetic training field
+Branches,Region,Broad reporting region.,Synthetic training field
+Customers,CustomerID,Unique SME customer key.,Synthetic training field
+Customers,BusinessName,Synthetic business name.,Synthetic training field
+Customers,BusinessSector,Industry/sector of the SME.,Synthetic training field
+Customers,District,Customer business district.,Synthetic training field
+Customers,BusinessAgeYears,How long the business has operated.,Synthetic training field
+Customers,AnnualRevenueBDT,Approximate annual business revenue in BDT.,Synthetic training field
+Customers,NumberOfEmployees,Number of employees in the SME.,Synthetic training field
+Customers,ExistingDebtBDT,Existing borrowing before the new application.,Synthetic training field
+Customers,PreviousLoans,Number of previous loans.,Synthetic training field
+Customers,PreviousDefaultFlag,1 = prior default history; 0 = no prior default.,Synthetic training field
+Customers,RelationshipYears,Years of relationship with the lender.,Synthetic training field
+Applications,ApplicationID,Unique loan application key.,Synthetic training field
+Applications,CustomerID,Customer who submitted the application.,Synthetic training field
+Applications,BranchID,Branch handling the application.,Synthetic training field
+Applications,ApplicationDate,Date application was received.,Synthetic training field
+Applications,LoanPurpose,Reason for borrowing.,Synthetic training field
+Applications,RequestedAmountBDT,Amount requested by the customer.,Synthetic training field
+Applications,RequestedTermMonths,Requested loan term in months.,Synthetic training field
+Applications,CollateralValueBDT,Estimated collateral value.,Synthetic training field
+Applications,ApplicationStatus,"Approved, Rejected, Withdrawn, or Pending.",Synthetic training field
+Applications,ApprovedAmountBDT,Approved amount; blank if not approved.,Synthetic training field
+Applications,DecisionDate,Date the application was resolved; blank for pending.,Synthetic training field
+Applications,DecisionReason,Reason for rejection/withdrawal where applicable.,Synthetic training field
+Applications,CreditOfficerID,Synthetic credit officer identifier.,Synthetic training field
+ApplicationStages,StageRecordID,Unique process-stage record.,Synthetic training field
+ApplicationStages,ApplicationID,Application moving through the process.,Synthetic training field
+ApplicationStages,StageOrder,Sequence number of the stage.,Synthetic training field
+ApplicationStages,StageName,Name of processing stage.,Synthetic training field
+ApplicationStages,Department,Department responsible for the stage.,Synthetic training field
+ApplicationStages,StageStartDate,Date the stage started.,Synthetic training field
+ApplicationStages,StageEndDate,Date the stage finished; blank if still in progress.,Synthetic training field
+ApplicationStages,DurationDays,Days spent in the stage.,Synthetic training field
+ApplicationStages,StageStatus,Completed or In Progress.,Synthetic training field
+Loans,LoanID,Unique disbursed loan key.,Synthetic training field
+Loans,ApplicationID,Approved application that created the loan.,Synthetic training field
+Loans,CustomerID,Borrower.,Synthetic training field
+Loans,BranchID,Branch handling the loan.,Synthetic training field
+Loans,DisbursementDate,Date funds were disbursed.,Synthetic training field
+Loans,DisbursedAmountBDT,Original principal disbursed.,Synthetic training field
+Loans,InterestRatePct,Annual nominal interest rate used in the synthetic data.,Synthetic training field
+Loans,TermMonths,Loan term.,Synthetic training field
+Loans,MonthlyInstallmentBDT,Scheduled monthly installment.,Synthetic training field
+Loans,MaturityDate,Scheduled final date.,Synthetic training field
+Loans,OutstandingBalanceBDT,Approximate remaining principal balance.,Synthetic training field
+Loans,DaysPastDue,Current number of days past due.,Synthetic training field
+Loans,CurrentLoanStatus,"Current, DPD bucket, or Closed.",Synthetic training field
+Repayments,RepaymentID,Unique installment record.,Synthetic training field
+Repayments,LoanID,Loan being repaid.,Synthetic training field
+Repayments,InstallmentNo,Installment sequence.,Synthetic training field
+Repayments,DueDate,Scheduled due date.,Synthetic training field
+Repayments,PaymentDate,Actual payment date; blank when unpaid.,Synthetic training field
+Repayments,AmountDueBDT,Scheduled installment amount.,Synthetic training field
+Repayments,AmountPaidBDT,Actual amount paid.,Synthetic training field
+Repayments,PaymentStatus,"Paid On Time, Paid Late, Partial, or Unpaid.",Synthetic training field
+Repayments,DaysLate,Number of days late for the installment.,Synthetic training field
